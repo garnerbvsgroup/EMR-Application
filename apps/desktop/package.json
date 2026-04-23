@@ -1,0 +1,59 @@
+{
+  "name": "@redwood/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop runtime for Garner Emergency Response.",
+  "author": "Aidan Garner",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "pack": "electron-builder --dir",
+    "portable": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "36.3.2",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "electronVersion": "36.3.2",
+    "appId": "com.aidangarner.garneremergencyresponse",
+    "productName": "Garner Emergency Response",
+    "npmRebuild": false,
+    "nodeGypRebuild": false,
+    "buildDependenciesFromSource": false,
+    "asar": true,
+    "forceCodeSigning": false,
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signAndEditExecutable": false,
+      "verifyUpdateCodeSignature": false
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "runtime/server",
+        "to": "server"
+      },
+      {
+        "from": "runtime/client",
+        "to": "client"
+      }
+    ]
+  }
+}

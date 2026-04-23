@@ -1,0 +1,27 @@
+{
+  "name": "garner-emergency-response",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:server": "npm --workspace @redwood/server run dev",
+    "dev:client": "npm --workspace @redwood/client run dev",
+    "build": "node scripts/build.mjs",
+    "build:desktop-assets": "node scripts/prepare-desktop-assets.mjs",
+    "build:shared": "npm --workspace @redwood/shared run build",
+    "build:server": "npm --workspace @redwood/server run build",
+    "build:client": "npm --workspace @redwood/client run build",
+    "start": "npm --workspace @redwood/server run start",
+    "desktop:start": "node scripts/desktop-start.mjs",
+    "desktop:dist": "node scripts/desktop-dist.mjs",
+    "desktop:portable": "npm --workspace @redwood/desktop run portable"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "typescript": "^5.8.3"
+  }
+}

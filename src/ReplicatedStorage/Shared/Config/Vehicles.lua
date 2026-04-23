@@ -1,0 +1,40 @@
+return {
+	CivilianCompact = {
+		DisplayName = "Cinder Compact",
+		Price = 4800,
+		Type = "Civilian",
+		Color = Color3.fromRGB(54, 112, 168),
+		HasLightbar = false,
+	},
+	CivilianSUV = {
+		DisplayName = "Mesa Utility",
+		Price = 8600,
+		Type = "Civilian",
+		Color = Color3.fromRGB(90, 90, 90),
+		HasLightbar = false,
+	},
+	PoliceInterceptor = {
+		DisplayName = "Interceptor Unit",
+		Price = 0,
+		Type = "Service",
+		AllowedTeams = { "CityPolice", "StatePatrol" },
+		Color = Color3.fromRGB(35, 35, 35),
+		HasLightbar = true,
+	},
+	Ambulance = {
+		DisplayName = "Ambulance",
+		Price = 0,
+		Type = "Service",
+		AllowedTeams = { "FireRescue" },
+		Color = Color3.fromRGB(220, 220, 220),
+		HasLightbar = true,
+	},
+	WorksTruck = {
+		DisplayName = "Works Truck",
+		Price = 0,
+		Type = "Service",
+		AllowedTeams = { "PublicWorks" },
+		Color = Color3.fromRGB(217, 132, 35),
+		HasLightbar = true,
+	},
+}
